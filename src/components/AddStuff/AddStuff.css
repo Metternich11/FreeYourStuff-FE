@@ -1,4 +1,3 @@
-
 .uploader {
   min-height: 100vh;
   display: flex;
@@ -78,7 +77,7 @@
   width: 90vw;
   margin-left: 5vw;
   padding-top: 2vh;
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
@@ -108,7 +107,7 @@
   font-weight: bold;
   margin-bottom: -10px;
   border-radius: 25px;
-  box-shadow: 0px 3px 6px 3px rgb(100,100,100, .2);
+  box-shadow: 0px 3px 6px 3px rgb(100, 100, 100, 0.2);
   display: inline-block;
 }
 
@@ -126,7 +125,7 @@
   color: var(--primary);
   border: 2px solid var(--primary);
   border-radius: 25px;
-  transition: transform .6s;
+  transition: transform 0.6s;
 }
 
 .span1 {
@@ -142,15 +141,12 @@
 
   margin-top: 23vh;
   margin-bottom: 2vh;
-  border: 2px dotted var(--primary) !important
-
-
+  border: 2px dotted var(--primary) !important;
 }
 
 .span3:hover {
   transform: scale(1.3);
-  transition: transform .2s;
-
+  transition: transform 0.2s;
 }
 
 .stageTwo {
@@ -158,13 +154,13 @@
 }
 
 .glow {
-  transition: transform .6s;
+  transition: transform 0.6s;
   transform: scale(1.1);
 }
 
 .dying {
   background-color: #af111c !important;
-  transition: background-color .5s cubic-bezier(.38,1.4,.84,1.57) .2s;
+  transition: background-color 0.5s cubic-bezier(0.38, 1.4, 0.84, 1.57) 0.2s;
   text-decoration: line-through;
   text-decoration-color: red;
 }
@@ -172,11 +168,6 @@
 .dead {
   display: none !important;
 }
-
-
-
-
-
 
 @media (min-width: 700px) {
   .prompts {
@@ -202,11 +193,9 @@
   .tags {
     min-width: 80vw;
   }
-
 }
 
 @media (min-width: 900px) {
-
   .picturePresent {
     width: 60vw;
     margin-left: 20vw;
@@ -221,11 +210,9 @@
   .tags {
     min-width: 60vw;
   }
-
 }
 
 @media (min-width: 1350px) {
-
   .uploader {
     width: 70vw;
     margin-left: 15vw;

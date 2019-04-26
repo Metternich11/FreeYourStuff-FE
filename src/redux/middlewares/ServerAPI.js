@@ -1,5 +1,5 @@
 import { getAllGiftsSuccess } from "../actions";
-
+import { HEROKU_APP_URL } from '../../config/config';
 
 export default store => next => action => {
   if (action.type !== 'GET_ALL_GIFTS') return next(action)
@@ -9,7 +9,7 @@ export default store => next => action => {
     type: action.type + '_REQUEST'
   })
   console.log("fetching")
-  fetch('https://fys-demo.herokuapp.com/getStuff')
+  fetch(`${HEROKU_APP_URL}/getStuff`)
     .then(data => data.json())
     .then(data => {
       console.log(data)

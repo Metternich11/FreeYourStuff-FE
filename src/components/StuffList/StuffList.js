@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import Stuff from '../Stuff/Stuff'
-import { connect } from 'react-redux'
-
-import './StuffList.css'
+import React, { Component } from 'react';
+import Stuff from '../Stuff/Stuff';
+import { connect } from 'react-redux';
 import Loading from '../Loading/Loading';
+
+import './StuffList.css';
 
 class StuffList extends Component {
 

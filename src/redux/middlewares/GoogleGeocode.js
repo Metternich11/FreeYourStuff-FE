@@ -1,8 +1,5 @@
 import { getGeocodeSuccess } from "../actions";
-
-const GOOGLE_KEY = 'AIzaSyBzBvfaosQJN9iUMMRAPD9ATnIPjofrCto'
-
-
+import { GOOGLE_API } from '../../config/config';
 
 export default store => next => action => {
 
@@ -15,7 +12,7 @@ export default store => next => action => {
   let lat = action.data.lat
   let lng = action.data.lng
 
-  fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${GOOGLE_KEY}`)
+  fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${GOOGLE_API}`)
   .then(res => res.json())
   .then(res => res.results[0].formatted_address)
   .then(res => store.dispatch(getGeocodeSuccess(res)))

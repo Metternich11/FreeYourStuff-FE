@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-// import Webcam from 'react-webcam'
+import React, { Component } from 'react';
 import PhotoMaker from '../PhotoMaker/PhotoMaker';
 import TagPrompts from '../TagPrompts/TagPrompts';
 import { connect } from 'react-redux';
-import { urlFromCloudinary, getTagsFromGoogle, getGeocode, sendNewGiftToDB} from '../../redux/actions'
-import './AddStuff.css'
+import { urlFromCloudinary, getTagsFromGoogle, getGeocode, sendNewGiftToDB} from '../../redux/actions';
 import Fireworks from '../Fireworks/Fireworks';
 import Loading from '../Loading/Loading';
+import { CLOUDINARY_PRESET, CLOUDINARY_API } from '../../config/config';
+// import Webcam from 'react-webcam'
 
-const CLOUDINARY_PRESET = 'xnny1dgk'
+import './AddStuff.css';
 
 class AddStuff extends Component {
 
@@ -19,7 +19,7 @@ class AddStuff extends Component {
     let formData = new FormData()
     formData.append('file', picture)
     formData.append('upload_preset', CLOUDINARY_PRESET)
-    formData.append('api_key', '981645852329497')
+    formData.append('api_key', CLOUDINARY_API)
     this.props.urlFromCloudinary(formData)
   }
 

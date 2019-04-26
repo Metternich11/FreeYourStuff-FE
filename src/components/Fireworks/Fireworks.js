@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-
-import './Fireworks.css'
+import './Fireworks.css';
 
 export default class Fireworks extends Component {
   render() {
