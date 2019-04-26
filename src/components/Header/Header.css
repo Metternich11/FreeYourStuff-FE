@@ -1,68 +1,35 @@
-
 .main-header {
-  background-color: var(--primary);
-  height: 9vh;
-  max-height: 80px;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0 3px 8px 0 rgba(80, 80, 80, 0.2), 0 6px 20px 0 rgba(190, 190, 190, 0.19);
+  background-color: var(--primary);
+  display: flex;
+  height: 8vh;
+  justify-content: flex-start;
+  max-height: 80px;
+  padding: 10px;
   position: fixed;
-  box-sizing: border-box;
-  z-index: 10;
+  width: 100vw;
+  z-index: 9999;
+  color: #fff;
 }
 
-.main-header p, 
-.main-header i {
-  color: var(--myWhite)
+i {
+  color: var(--primary);
 }
 
-.main-header p {
-  font-family: var(--font);
-  font-weight: 600;
-  font-size: 1.3rem;
+.navigation-h1 {
+  font-size: 1.4rem;
+  margin-left: 5vw;
+
 }
 
-.main-header i {
-  font-size: 1.5rem;
+.navigation-back {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding: 5px 10px;
 }
 
-.main-header img {
-  width: 2.5rem;
-}
-
-
-
-@media (min-width: 600px) {
-  .main-header {
-    padding: 0 50px;
-  }
-
-  .main-header p {
-    font-size: 2rem;
-  }
-
-  .main-header i {
-    font-size: 2rem;
-  }
-
-  .main-header img {
-    width: 3rem;
-  }
-}
-
-@media (min-width: 900px) {
-  .main-header {
-    max-width: 90vw;
-    margin-left: 5vw;
-  }
-}
-
-@media (min-width: 1200px) {
-  .main-header {
-    max-width: 74vw;
-    margin-left: 13vw;
-  }
+.navigation-back:hover {
+  background-color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.3);
 }

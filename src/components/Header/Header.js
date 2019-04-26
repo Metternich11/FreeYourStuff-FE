@@ -33,12 +33,11 @@ export default class Header extends Component {
     return (
       <div className="main-header">
       <Link to="/">
-        <i className="fas fa-arrow-left"></i>
+        <div className="navigation-back">
+          <i className="fas fa-arrow-left navigation-icon"></i>
+        </div>
       </Link>
-        <p>{header}</p>
-      <Link to='/'>
-        <img src="./images/icons/android-icon-144x144.png" alt="small logo icon"></img>
-      </Link>
+        <h1 className="navigation-h1">{header}</h1>
       </div>
     )
   }

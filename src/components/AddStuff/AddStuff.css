@@ -22,7 +22,7 @@
   border: 2px dashed #ccc;
   border-radius: 20px;
   width: 100px;
-  height: 100px; 
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
 .photoMaker {
   background-color: var(--primary);
   width: 100px;
-  height: 100px; 
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +126,6 @@
   color: var(--primary);
   border: 2px solid var(--primary);
   border-radius: 25px;
-  /* position: absolute; */
   transition: transform .6s;
 }
 
@@ -239,7 +238,7 @@
 
   /* .file-drop-target {
     width: 20vw;
-    height: 15vh; 
+    height: 15vh;
     justify-content: space-evenly;
     margin-bottom: 0vh;
   } */
