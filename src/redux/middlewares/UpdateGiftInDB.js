@@ -1,4 +1,5 @@
-import { updateGiftInDBSuccess } from '../actions'
+import { updateGiftInDBSuccess } from '../actions';
+import { HEROKU_APP_URL } from '../../config/config';
 
 export default store => next => action => {
   if (action.type !== 'UPDATE_GIFT_IN_DB') return next(action)
@@ -9,7 +10,7 @@ export default store => next => action => {
     type: action.type + '_REQUEST'
   })
 
-  fetch(`https://fys-demo.herokuapp.com/update/${action.data.id}`, {
+  fetch(`${HEROKU_APP_URL}/${action.data.id}`, {
     method: 'PUT',
     headers: {
       "Content-Type":"application/json"

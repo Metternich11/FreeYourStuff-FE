@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import './Loading.css'
+import React, { Component } from 'react';
+
+import './Loading.css';
 
 export default class Loading extends Component {
   render() {
@@ -7,7 +8,7 @@ export default class Loading extends Component {
       <div>
         <div className="loadingPage">
           <div className="lds-hourglass"></div>
-        </div>  
+        </div>
       </div>
     )
   }

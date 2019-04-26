@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
-import TagPrompts from '../TagPrompts/TagPrompts'
+import React, { Component } from 'react';
+import TagPrompts from '../TagPrompts/TagPrompts';
 import { connect } from 'react-redux';
-import { urlFromCloudinary, getTagsFromGoogle, updateGiftInDB, deleteGiftFromDB} from '../../redux/actions'
-import './Update.css'
-import Loading from '../Loading/Loading';
+import { urlFromCloudinary, getTagsFromGoogle, updateGiftInDB, deleteGiftFromDB} from '../../redux/actions';
 import Fireworks from '../Fireworks/Fireworks';
+import Loading from '../Loading/Loading';
+import { CLOUDINARY_PRESET, CLOUDINARY_API } from '../../config/config';
 
-const CLOUDINARY_PRESET = 'xnny1dgk'
-
+import './Update.css';
 
 class Update extends Component {
 
@@ -18,7 +17,7 @@ class Update extends Component {
     let formData = new FormData()
     formData.append('file', picture)
     formData.append('upload_preset', CLOUDINARY_PRESET)
-    formData.append('api_key', '981645852329497')
+    formData.append('api_key', CLOUDINARY_API)
 
     this.props.urlFromCloudinary(formData)
   }
