@@ -7,13 +7,13 @@ import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getAllGifts, sortAllGifts, getLocation, getAllGiftsSuccess } from './redux/actions'
 
-import Header from './components/Header/index'
+import Header from './components/Header/Header'
 import StuffList from './components/StuffList/StuffList'
 import AddStuff from './components/AddStuff/AddStuff';
-import MapContainer from './components/Map/Map';
+import MapContainer from './components/MapContainer/MapContainer';
 import LandingPage from './components/LandingPage/LandingPage';
 import Update from './components/Update/Update';
-import Loading from './components/loading/Loading';
+import Loading from './components/Loading/Loading';
 
 
 class App extends Component {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 
 import './StuffList.css'
-import Loading from '../loading/Loading';
+import Loading from '../Loading/Loading';
 
 class StuffList extends Component {
 
@@ -14,17 +14,17 @@ class StuffList extends Component {
 
     if (!this.props.gifts) return <Loading />
 
-    else 
-    
+    else
+
     return (
       <div className="stuffList">
-      
+
       <h2> Find a gift </h2>
 
         {this.props.gifts.map(item => {
           return <Stuff key={item._id} data={item} myLocation={this.props.location}/>
-        })} 
-        
+        })}
+
       </div>
     )
   }
@@ -45,17 +45,3 @@ const mapStateToProps = (state) => ({
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(StuffList);
-
-
-
-
-
-
-
-
-
-
-
-
-
-

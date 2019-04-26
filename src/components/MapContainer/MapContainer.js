@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-import './Map.css'
+import './MapContainer.css'
 import MapSlider from '../MapSlider/MapSlider';
-import Loading from '../loading/Loading';
+import Loading from '../Loading/Loading';
 
 export class MapContainer extends Component {
 
