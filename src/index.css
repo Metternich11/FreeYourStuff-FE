@@ -5,9 +5,10 @@
 }
 
 a {
-  text-decoration: none;
   color: #666;
+  text-decoration: none;
 }
+
 a:hover {
   color: #999;
 }
@@ -15,12 +16,9 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
-}
-
-:root {
   --primary: #94E293;
   --secondary: lightgreen;
-  --hover: #D5FFCE;
+  --hover: #dcffd7;
   --myWhite: ghostwhite;
   --myGrey: lightgrey;
   font-family: 'Poppins', sans-serif;

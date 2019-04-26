@@ -2,29 +2,22 @@ import React, { Component } from 'react'
 import Stuff from '../Stuff/Stuff'
 import { connect } from 'react-redux'
 
-
 import './StuffList.css'
 import Loading from '../Loading/Loading';
 
 class StuffList extends Component {
 
   render () {
-
-    console.log(this.props)
-
     if (!this.props.gifts) return <Loading />
 
     else
 
     return (
       <div className="stuffList">
-
-      <h2> Find a gift </h2>
-
+        <h2> Find a gift </h2>
         {this.props.gifts.map(item => {
           return <Stuff key={item._id} data={item} myLocation={this.props.location}/>
         })}
-
       </div>
     )
   }

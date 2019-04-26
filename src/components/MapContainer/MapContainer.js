@@ -85,48 +85,27 @@ export class MapContainer extends Component {
   }
 
   render() {
-
-    const style = {
-      width: '100%',
-      height: '91%'
-    }
-
     if (!this.props.gifts) return <Loading />
 
-     else return (
-      <div className="mapDiv">
+    else return (
+       <div>
+          <Map google={this.props.google}
+            center={this.state.center}
+            initialCenter={this.state.initialCenter}
+            onClick={this.onMapClicked}
+            streetViewControl={false}
+            zoom={13}>
+            {this.props.stuffList.map(item => this.addMarker(item))}
 
-        <Map google={this.props.google}
-          onClick={this.onMapClicked}
-          zoom={13}
-          className="map"
-          style={style}
-          initialCenter={this.state.initialCenter}
-          center={this.state.center}>
-
-
-          {this.props.stuffList.map(item => {
-            return this.addMarker(item)
-          })}
-
-
-            <InfoWindow className="infoWindow"
-              marker={this.state.activeMarker}
-              visible={this.state.showingInfoWindow}>
+            <InfoWindow className="infoWindow" marker={this.state.activeMarker} visible={this.state.showingInfoWindow}>
               <div>
-                {this.state.infoWindowTags.map((tag, i) => {
-                  return <h5 className="infoTag" key={i}># {tag}</h5>
-                })}
+                {this.state.infoWindowTags.map((tag, i) => <h5 className="infoTag" key={i}># {tag}</h5>)}
               </div>
             </InfoWindow>
+          </Map>
 
-
-        </Map>
-
-        <MapSlider stuffList={this.props.stuffList} expandSlider={this.expandSlider}/>
-
-      </div>
-
+          <MapSlider stuffList={this.props.stuffList} expandSlider={this.expandSlider}/>
+        </div>
     );
   }
 }
@@ -136,15 +115,15 @@ const mapDispatchToProps = (dispatch) => ({})
 const mapStateToProps = (state) => ({
 
   gifts: state.gifts,
-  location: state.location,
   loading: state.loading,
+  location: state.location,
+  listToMapLocation: state.listToMapLocation,
   sorted: state.sorted,
-  listToMapLocation: state.listToMapLocation
 
 })
 
 const wrappedMap = GoogleApiWrapper({
-  apiKey: 'AIzaSyBzBvfaosQJN9iUMMRAPD9ATnIPjofrCto'
+  apiKey: 'AIzaSyA2gvw7hbAdVE2s1YgUwhPVr9K7GPsYlQ4'
 })(MapContainer)
 
 export default connect(mapStateToProps, mapDispatchToProps)(wrappedMap);
