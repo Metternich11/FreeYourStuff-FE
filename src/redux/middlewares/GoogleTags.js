@@ -1,8 +1,5 @@
 import { getTagsFromGoogleSuccess } from '../actions'
-
-
-const GOOGLE_KEY = 'AIzaSyBzBvfaosQJN9iUMMRAPD9ATnIPjofrCto'
-const GOOGLE_VISION = `https://vision.googleapis.com/v1/images:annotate?key=${GOOGLE_KEY}`
+import { GOOGLE_VISION_URL } from '../../config/config';
 
 const googleVisionRequestFormat = (url) => {
   return {
@@ -34,7 +31,7 @@ export default store => next => action => {
 
   let tags = []
 
-    fetch(GOOGLE_VISION, {
+    fetch(GOOGLE_VISION_URL, {
       method: 'POST',
       body: JSON.stringify(googleVisionRequestFormat(action.data)),
       headers: {
@@ -47,7 +44,7 @@ export default store => next => action => {
       tags.push(item.description)
     }))
     .then(() => store.dispatch(getTagsFromGoogleSuccess(tags)))
-    
+
     .catch(err => {
       next({
         ...action,

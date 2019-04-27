@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import './Stuff.css'
-import {Link} from 'react-router-dom'
-import { connect } from 'react-redux'
-import { listToMap } from '../../redux/actions'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { listToMap } from '../../redux/actions';
 import helpers from '../../helpers/helpers';
+
+import './Stuff.css';
 
 
 class Stuff extends Component {
@@ -34,14 +35,14 @@ class Stuff extends Component {
             <img src={stuff.picture} alt="findAGift" onClick={this.listToMap}/>
             <p className="dropDistance">
               {address}
-              <span> 
+              <span>
               {stuff.distance.toFixed(1)}
-              km</span> 
-              <i className="fas fa-location-arrow" 
+              km</span>
+              <i className="fas fa-location-arrow"
               style={style}></i></p>
           </div>
         </Link>
-          
+
           <div className="tagss">
               {stuff.tags.map((tag, i) => {
                 return <p key={i} className="listTag" style={{background: "var(--primary)"}}>{tag}</p>
@@ -61,6 +62,3 @@ const mapDispatchToProps = (dispatch) => ({
 const mapStateToProps = (state) => ({})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Stuff);
-
-
-

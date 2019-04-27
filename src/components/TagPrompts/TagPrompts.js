@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class TagPrompts extends Component {
 
@@ -11,9 +11,9 @@ export default class TagPrompts extends Component {
 
     return (
       <div className="prompts">
-        {this.props.number===3 ? 
+        {this.props.number===3 ?
           <p className="addSpan span1" onTransitionEnd={this.glow} ref="glowy">Take a pic </p>
-          : null 
+          : null
           }
           <p className="addSpan span2" onTransitionEnd={this.glow} ref="glowy2"> Kill tags </p>
           <p className="addSpan span3" onClick={this.submitStuff} > {this.props.buttonName}! </p>

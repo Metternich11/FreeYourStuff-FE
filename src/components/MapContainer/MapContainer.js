@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-import './MapContainer.css'
 import MapSlider from '../MapSlider/MapSlider';
 import Loading from '../Loading/Loading';
+import { GOOGLE_API } from '../../config/config';
+
+import './MapContainer.css';
 
 export class MapContainer extends Component {
 
@@ -123,7 +124,7 @@ const mapStateToProps = (state) => ({
 })
 
 const wrappedMap = GoogleApiWrapper({
-  apiKey: 'AIzaSyA2gvw7hbAdVE2s1YgUwhPVr9K7GPsYlQ4'
+  apiKey: GOOGLE_API
 })(MapContainer)
 
 export default connect(mapStateToProps, mapDispatchToProps)(wrappedMap);
