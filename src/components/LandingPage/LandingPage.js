@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import './LandingPage.css'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+import './LandingPage.css';
 
 
 export default class LandingPage extends Component {

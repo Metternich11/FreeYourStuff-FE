@@ -1,4 +1,5 @@
-import { sendNewGiftToDBSuccess } from '../actions'
+import { sendNewGiftToDBSuccess } from '../actions';
+import { HEROKU_APP_URL } from '../../config/config';
 
 export default store => next => action => {
   if (action.type !== 'NEW_GIFT_TO_DB') return next(action)
@@ -8,7 +9,7 @@ export default store => next => action => {
     type: action.type + '_REQUEST'
   })
 
-    fetch('https://fys-demo.herokuapp.com/create', {
+    fetch(`${HEROKU_APP_URL}/create`, {
       method: 'POST',
       headers: {
         "Content-Type":"application/json"

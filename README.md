@@ -1,8 +1,8 @@
-
 # Free Your Stuff
 
-## Idea 
-A __mobile-first__ platform designed to help facilitate the culture of __giving away__ your unused/unwanted items away to people who need them more then you!
+## Idea
+
+A **mobile-first** platform designed to help facilitate the culture of **giving away** your unused/unwanted items away to people who need them more then you!
 
 <br>
 <center>
@@ -11,20 +11,21 @@ A __mobile-first__ platform designed to help facilitate the culture of __giving 
 <br>
 
 ## Motivation
-A common practice in the city of Tubingen, Germany, was that people would leave their unwanted items in the street with a sign saying __"For Free"__. I appreciated the idea, and the recycling culture, however also noticed some problems such as: 
-* Only immediate passes by would be able to take them
+
+A common practice in the city of Tubingen, Germany, was that people would leave their unwanted items in the street with a sign saying **"For Free"**. I appreciated the idea and the recycling culture, however also noticed some problems such as:
+
+* Only an immediate passerby would be able to take them
 * Things would be left out for multiple days
 * Also in bad weather
 * Some people would leave undesirable stuff (trash)
 
-There are platforms that try to help, however they are poorly designed, often requiring long descriptions to be able to past an app, and __hard to navigate__
+There are platforms that try to help, however they are poorly designed, often requiring long descriptions to be able to past an app, and **hard to navigate**
 
-This app is currently able to __solve all these problems__ by: 
-* One click uploading 
-* geoloaction of items dropped
+This app is currently able to **solve all these problems** by:
+
+* One click uploading
+* Geolocation of items dropped
 * photo recognition enabling *smart tagging*
-
-plus many more features to come!
 
 ## Screenshots
 <br>
@@ -33,51 +34,45 @@ plus many more features to come!
 </center>
 <br>
 
-
 ## Getting Started
 
-### Prerequisites
-* Node 
-* Npm
-* MongoDb
-*  Cloudinary
-* Google Api Key
-* __Free Your Stuff__ back-end
+1. Clone both the **Free Your Stuff** [front-end](https://github.com/OliWalker/FreeYourStuff-FE/) and the **Free Your Stuff** [back-end](https://github.com/OliWalker/FreeYourStuff-BE)
+2. In the command line, for both repos, enter `npm i` then follow the repository specific instructions below.
 
+## Frontend Repository Configuration
 
-### Installing
+### Step 1: Acquire Google Cloud API Key
 
-1. Clone both the __Free Your Stuff__ [front-end](https://github.com/OliWalker/FreeYourStuff-FE/) and the __Free Your Stuff__ [back-end](https://github.com/OliWalker/FreeYourStuff-BE)
-2. In the command line, for both repos, enter:
-```
-npm install
-```
-#### on the front end
-3. Add in your Google Api Key
-4. Add in your Cloudinary Account
-### on the back end
-5. Create a __.env__ file - following the __.env.example__
+You will need to acquire a Google Cloud API key that grants you access to **Cloud Vision API** and **Maps JavaScript API.**
 
-## To start 
+Go to [https://cloud.google.com/](https://cloud.google.com/) and create an account. At the time of writing this, it is a requirement to enter your payment details to prove you are not a robot. Google informs you during this process that no actual billing will be taken without your authorisation.
 
-#### on the front end
-```
-npm start
-```
-#### on the back end
-```
-npm run dev
-```
+### Step 2: Setup a Cloudinary account
 
-## Next Steps
-As previously mentioned I have a huge list of features that I am planning to implement including: 
+Go to [https://cloudinary.com/](https://cloudinary.com/) and create an account. In the Settings - Upload page which can be accessed at [https://cloudinary.com/console/settings/upload](https://cloudinary.com/console/settings/upload), search for 'Add upload preset' and create a new one. Set the 'Signing Mode' to be 'Unsigned' and save the newly created upload preset. You will need the upload preset name in your config file.
+
+### Step 3: Create a config file
+
+Using the `/config/example.config.js` file, create your own `config.js` file inside the `/config` folder. This file should contain your Google and Cloundinary details.
+
+## Backend Repository Configuration
+
+TODO (replace content below with step-by-step instructions)
+
+Create a **.env** file - following the **.env.example**
+
+## Starting the application
+
+- Frontend: `npm start`
+- Backend: `npm run dev`
+
+## Possible features to add
+
 * Tests!
-* login/ authentication & user accounts
-* weather recognition (if weather is bad, don't leave things out!)
-* user messages
-* ability to gift things person to person
-* messages between users
-* etc etc
+* Login/authentication & user accounts
+* Weather recognition (if weather is bad, don't leave things out!)
+* User messages
+* Ability to gift things person to person
 
 ## Tech Stack
 
@@ -85,15 +80,14 @@ As previously mentioned I have a huge list of features that I am planning to imp
 * [Koa](https://koajs.com/) - The backend framework used
 * [MongoDb](https://www.mongodb.com) - The database used
 * [Cloudinary](https://cloudinary.com) - The photo-storage database
-* [Google Api's](https://console.cloud.google.com) - Api's for Maps and Photo-Recognition 
+* [Google APIs](https://console.cloud.google.com) - APIs for Maps and Cloud Vision
+
 ## Contributing
 
 Contributions Welcome!
 
-This is an on-going project and external input and ideas will be gladly recieved!
-
+This is an ongoing project and external input and ideas will be gladly received!
 
 ## License
 
 This project is licensed under the MIT License, take it, have fun.
-
