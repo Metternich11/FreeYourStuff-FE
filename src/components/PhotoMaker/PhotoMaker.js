@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
-import FileDrop from 'react-file-drop';
+import React, { Component } from "react";
+import FileDrop from "react-file-drop";
+
+import "./PhotoMaker.css";
 
 export default class PhotoMaker extends Component {
   render() {
-
-
     return (
-
-      <div className="photoMaker" >
-
-        <FileDrop onDrop={this.props.uploadPic}>
-            <p className="upLoadText"> Drag and drop here </p>
-            <input type="file" id="fileuploader" name="file" accept="*" onChange={this.props.uploadPic}/>
-          <label htmlFor="fileuploader"><i className="fas fa-camera"></i></label>
+      <div>
+        <FileDrop onDrop={this.props.uploadPic} className="drag-and-drop">
+          <p>Drag & Drop</p>
+          <input
+            type="file"
+            id="fileuploader"
+            name="file"
+            accept="*"
+            onChange={this.props.uploadPic}
+          />
+          <label htmlFor="fileuploader">
+            <i className="fas fa-camera" />
+          </label>
         </FileDrop>
 
         {/* <div className="photoDiv">
@@ -21,8 +27,7 @@ export default class PhotoMaker extends Component {
             <i className="fas fa-camera"></i>
           </div>
         </div> */}
-
       </div>
-    )
+    );
   }
 }
