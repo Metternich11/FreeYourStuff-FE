@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import './MapSlider.css'
+import './MapSlider.css';
 
 export default class MapSlider extends Component {
 
@@ -10,7 +10,7 @@ export default class MapSlider extends Component {
           {this.props.stuffList.map((item, i) => {
             return (
               <div className="container-image" key={i}>
-                <img src={item.picture} alt='Gift image' onClick={this.props.expandSlider}/>
+                <img src={item.picture} alt='' onClick={this.props.expandSlider}/>
               </div>
             )
           })}

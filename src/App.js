@@ -61,12 +61,18 @@ class App extends Component {
     else {
       return (
         <div className="App">
-          <Route path="/" component={Header} />
-          <Route exact path="/" render={this.myLandingPage} />
-          <Route path="/list" render={this.myList} />
-          <Route path="/map" render={this.myMap} />
-          <Route path="/add" component={AddStuff} />
-          <Route path="/update" render={this.myUpdate} />
+
+          <nav>
+            <Route path="/" component={Header} />
+          </nav>
+          <main>
+            <Route exact path="/" render={this.myLandingPage} />
+            <Route path="/list" render={this.myList} />
+            <Route path="/map" render={this.myMap} />
+            <Route path="/add" component={AddStuff} />
+            <Route path="/update" render={this.myUpdate} />
+          </main>
+
         </div>
       );
     }

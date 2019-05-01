@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 
 * {
   box-sizing: border-box;
@@ -16,10 +16,17 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
-  --primary: #94E293;
-  --secondary: lightgreen;
+  --primary: #94e293;
+  --primary-tinted: #85cb84;
+  --secondary: #ff5733;
+  --secondary-tinted: #e64e2e;
   --hover: #dcffd7;
   --myWhite: ghostwhite;
   --myGrey: lightgrey;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }

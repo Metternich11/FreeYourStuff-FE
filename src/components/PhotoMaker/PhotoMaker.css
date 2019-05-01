@@ -1,0 +1,30 @@
+.drag-and-drop {
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  width: 200px;
+}
+.drag-and-drop:hover {
+  cursor: pointer;
+  background-color: var(--primary-tinted);
+}
+.drag-and-drop i {
+  color: #fff;
+  font-size: 2rem;
+}
+.drag-and-drop i:hover {
+  cursor: pointer;
+}
+#fileuploader {
+  display: none;
+}
+.file-drop-target {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
