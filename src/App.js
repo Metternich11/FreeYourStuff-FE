@@ -61,6 +61,7 @@ class App extends Component {
     else {
       return (
         <div className="App">
+
           <nav>
             <Route path="/" component={Header} />
           </nav>
@@ -71,6 +72,7 @@ class App extends Component {
             <Route path="/add" component={AddStuff} />
             <Route path="/update" render={this.myUpdate} />
           </main>
+
         </div>
       );
     }
