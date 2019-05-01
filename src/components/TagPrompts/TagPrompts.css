@@ -6,13 +6,15 @@
   color: #fff;
 }
 a {
-  background-color: var(--primary);
   border-radius: 2px;
-  color: #fff;
   cursor: pointer;
   padding: 2px 10px;
 }
-a:hover {
+.prompts a {
+  background-color: var(--primary);
+  color: #fff;
+}
+.prompts a:hover {
   background-color: var(--primary-tinted);
   color: #fff;
 }
